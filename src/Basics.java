@@ -50,16 +50,7 @@ public class Basics {
 		
 		//Get Vet
 		
-	String getVetResponse=	given().log().all()
-		.when().get("/api/vets")
-		.then().assertThat().log().all().statusCode(200).extract().response().asString();
 	
-	JsonPath js1=ReUsableMethods.rawToJson(getVetResponse);
-	String firstName =js1.getString("Name");
-	System.out.println(firstName);
-	Assert.assertEquals(firstName, "prishika");
-	//Cucumber Junit, Testng
-		
 		
 	}
 
