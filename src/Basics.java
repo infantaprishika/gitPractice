@@ -18,7 +18,7 @@ public class Basics {
 		//given - all input details 
 		//when - Submit the API -resource,http method
 		//Then - validate the response
-		
+		System.out.println("develop branch example");
 		RestAssured.baseURI= "petclinicapi.e46708b92c054086909b.eastus.aksapp.io/petclinic";
 		String response=given().log().all().header("Content-Type","application/json")
 		.body(payload.AddVet()).when().post("api/vets")
